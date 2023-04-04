@@ -36,4 +36,6 @@ jobs:
       run: |
         pwd
         ls
+    - name: Run chmod on gradlew
+      run: chmod +x ./gradlew
 
