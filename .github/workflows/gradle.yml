@@ -32,11 +32,6 @@ jobs:
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         arguments: build
-    - name: Print working directory
-      run: |
-        pwd
-        ls
-    - name: Run chmod on gradlew
-      run: chmod +x ./gradlew
+
       
 
