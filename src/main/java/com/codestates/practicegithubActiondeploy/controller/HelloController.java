@@ -1,6 +1,7 @@
 package com.codestates.practicegithubActiondeploy.controller;
 
 import com.codestates.practicegithubActiondeploy.service.CordJgService;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -14,16 +15,16 @@ public class HelloController {
     }
 
     @GetMapping
-    public String hello () {
+    public String hello (Model model) {
 
         String str1 = "Hello World! Hello BE BootCam2!!";
         String str2 = "My name is JG";
 
         String result = service.calculate(str1,str2);
 
+        model.addAttribute(result);
 
-
-        return result +"what is it?";
+        return "index.html" ;
     }
 
     @GetMapping("/main")
