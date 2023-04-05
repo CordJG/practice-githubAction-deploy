@@ -22,9 +22,9 @@ public class HelloController {
 
         String result = service.calculate(str1,str2);
 
-        model.addAttribute(result);
+        model.addAttribute("result",result);
 
-        return "index.html" ;
+        return "index" ;
     }
 
     @GetMapping("/main")
