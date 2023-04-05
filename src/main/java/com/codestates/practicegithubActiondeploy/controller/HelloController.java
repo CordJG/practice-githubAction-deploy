@@ -25,8 +25,22 @@ public class HelloController {
         String result = service.calculate(str1,str2);
 
 
+
         return result;
     }
+
+    @GetMapping()
+    public String hello3() {
+
+        String str3 = "Hello World! Hello BE BootCam2!!";
+        String str4 = "My name is JG";
+
+        String result2 = service.calculate(str3,str4);
+
+        return result2;
+    }
+
+
 
     @GetMapping("/main")
     public String hello2 () {
