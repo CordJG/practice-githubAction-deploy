@@ -2,9 +2,12 @@ package com.codestates.practicegithubActiondeploy.controller;
 
 import com.codestates.practicegithubActiondeploy.service.CordJgService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/")
 public class HelloController {
 
     private final CordJgService service;
@@ -13,7 +16,7 @@ public class HelloController {
         this.service = service;
     }
 
-    @GetMapping("/")
+    @GetMapping
     public String hello () {
 
         String str1 = "Hello World! Hello BE BootCam2!!";
@@ -23,6 +26,12 @@ public class HelloController {
 
 
         return result;
+    }
+
+    @GetMapping("/main")
+    public String hello2 () {
+
+        return "안녕하세요";
     }
 
 }
