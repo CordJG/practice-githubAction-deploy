@@ -25,7 +25,7 @@ public class HelloController {
 
         model.addAttribute("result",result);
 
-        return "index" ;
+        return "index";
     }
 
     @GetMapping("/main")
