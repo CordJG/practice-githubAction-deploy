@@ -33,7 +33,7 @@ public class HelloController {
     public String hello3() {
 
         String str3 = "Hello World! Hello BE BootCam2!!";
-        String str4 = "My name is JG";
+        String str4 = "My name is JG222";
 
         String result2 = service.calculate(str3,str4);
 
